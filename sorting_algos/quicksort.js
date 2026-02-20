@@ -2,7 +2,7 @@ let arr = [9, 7, 8, 5, 10, 1];
 // implementing quicksort
 
 function partition(arr, start, end) {
-  // this appraoch of partioning is very simple, in other tutorial it is a very big implementation but this is the best ans short so use this. his approach is taken from coder army youtube tutorial.
+  // this approach of partioning is very simple, in other tutorial it is a very big implementation but this is the best ans short so use this. his approach is taken from coder army youtube tutorial.
   let pivotElement = arr[end];
   let pointer = start;
   for (let i = start; i <= end; i++) {
@@ -20,6 +20,7 @@ function partition(arr, start, end) {
 function quicksort(arr, start, end) {
   if (start >= end) return;
   let p = partition(arr, start, end);
+  console.log(p);
   quicksort(arr, start, p - 1);
   quicksort(arr, p + 1, end);
 }
